@@ -11,7 +11,8 @@ data.set_index('Country', inplace=True)
 # Create a bar plot for the data with transparency (alpha) for better readability
 plt.figure(figsize=(12, 8))
 data.plot(kind='bar', alpha=0.7)
-# Set labels and title for better understanding
+
+# Setting labels and title for better understanding
 plt.xlabel('Countries')
 plt.ylabel('% of Population')
 plt.title('Access to Electricity from 2018 to 2021')
@@ -24,6 +25,3 @@ plt.ylim(0, 100)
 
 # Display the plot
 plt.show()
-
-# Print the dataframe to view the raw data
-print(data)
