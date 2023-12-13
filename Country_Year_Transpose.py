@@ -31,13 +31,13 @@ def read_data_function(data_file):
         df_years (DataFrame): Transposed DataFrame with years as rows.
     """
     # Read the CSV file into a DataFrame, using the first column as the index
-    df_countries = pd.read_csv(data_file, index_col=0)
+    df_countries = pd.read_csv(data_file, index_col = 0)
     
     # Transpose the DataFrame to have years as rows
     df_years = df_countries.transpose()
     
     # Rename the index to 'Year'
-    df_years = df_years.rename_axis('Year', axis=1)
+    df_years = df_years.rename_axis('Year', axis = 1)
     
     return df_countries, df_years
 
@@ -49,7 +49,7 @@ def skew(df_countries):
     std = np.std(df_countries)
     
     # now calculate the skewness
-    value = np.sum(((df_countries-aver) / std)**3) / len(df_countries-2)
+    value = np.sum(((df_countries - aver) / std)**3) / len(df_countries - 2)
     
     return value
 
@@ -61,9 +61,10 @@ def kurtosis(df_countries):
     std = np.std(df_countries)
     
     # now calculate the kurtosis
-    value = np.sum(((df_countries-aver) / std)**4) / len(df_countries-3) - 3.0
+    value = np.sum(((df_countries - aver) / std)**4) / len(df_countries - 3) - 3.0
     
     return value
+
 
 # Calling the function and saving the returned DataFrames
 df_countries, df_years = read_data_function('Access_to_Electricity(Rural).csv')

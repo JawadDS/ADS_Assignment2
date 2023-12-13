@@ -38,15 +38,15 @@ def plot_co2_emissions(df):
     - df (pd.DataFrame): The DataFrame containing the data.
     """
     # Set 'Country' column as the index
-    df.set_index('Country', inplace=True)
+    df.set_index('Country', inplace = True)
 
     # Plot the data as a bar plot
-    df.plot(kind='bar')
+    df.plot(kind = 'bar')
 
     plt.title('CO2 Emissions by Country (2011-2020)')
     plt.xlabel('Year')
     plt.ylabel('CO2 Emission (in million metric tons)')
-    plt.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.legend(titl = 'Country', bbox_to_anchor = (1.05, 1), loc = 'upper left')
     plt.show()
 
  # Replace 'path_to_your_csv_file.csv' with the actual path to your CSV file

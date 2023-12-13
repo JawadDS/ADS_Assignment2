@@ -38,18 +38,18 @@ def plot_energy_use(df):
     - df (pd.DataFrame): The DataFrame containing the data.
     """
     # Set 'Country' column as the index
-    df.set_index('Country', inplace=True)
+    df.set_index('Country', inplace = True)
 
     # Plot the data as a line plot
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize = (12, 8))
 
     for country in df.index:
-        plt.plot(df.columns, df.loc[country], label=country)
+        plt.plot(df.columns, df.loc[country], label = country)
 
     plt.title('Energy Use Over Years by Country')
     plt.xlabel('Year')
     plt.ylabel('Energy Use(kg of oil equivalent per capita)')
-    plt.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.legend(title = 'Country', bbox_to_anchor=(1.05, 1), loc = 'upper left')
     plt.grid(True)
     plt.show()
 # Read the energy use data using the function

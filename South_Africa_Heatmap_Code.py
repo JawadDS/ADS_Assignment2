@@ -34,7 +34,7 @@ def read_and_plot_heatmap(file_path):
 
     # Plot the heatmap
     plt.figure(figsize=(10, 8))
-    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
+    sns.heatmap(correlation_matrix, annot = True, cmap = 'coolwarm', fmt = '.2f', linewidths = .5)
     plt.title('Correlation Heatmap For South Africa (2010-2014)')
     plt.show()
 
